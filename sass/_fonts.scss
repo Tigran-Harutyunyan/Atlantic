@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Futura-Book";
+    src: url("../fonts/FuturaBookfontt");
+    src: url("../fonts/FuturaBookfont.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaBookfont.woff") format("woff"), url("../fonts/FuturaBookfont.woff2") format("woff2"), url("../fonts/FuturaBookfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "Futura-Medium-Bt";
+    src: url("../fonts/futuramediumbt");
+    src: url("../fonts/futuramediumbt.eot?#iefix") format("embedded-opentype"), url("../fonts/futuramediumbt.woff") format("woff"), url("../fonts/futuramediumbt.woff2") format("woff2"), url("../fonts/futuramediumbt.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'Futura-Light';
+    src: url('../fonts/futura_light-webfont.woff2') format('woff2'), url('../fonts/futura_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaStd-Light';
+    src: url('../fonts/FuturaStd-Light.woff2') format('woff2'), url('../fonts/FuturaStd-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaHeavyfont';
+    src: url('../fonts/FuturaHeavyfont.woff2') format('woff2'), url('../fonts/FuturaHeavyfont.woff') format('woff'),
+    url("../fonts/FuturaBookfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.main-font {
+    font-family: 'Futura-Book', sans-serif;
+}
+
+.main-font2 {
+    font-family: 'Futura-Light', sans-serif;
+}
+
+.crimson {
+    font-family: 'Futura-Medium-Bt', serif;
+}
+.main-font3 {
+    font-family: 'Futura-Medium-Bt', serif;
+}
+.main-font4 {
+    font-family: 'FuturaStd-Light', serif;
+}
+.main-font5 {
+    font-family: 'FuturaHeavyfont', serif; 
+}
