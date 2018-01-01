@@ -27,7 +27,7 @@ $(document).ready(function() {
                 }).done(function(success) {
                     $("#contact_name").val("");
                     $("#contact_email").val("");
-                    $("#contact_phone").val(""); 
+                    $("#contact_phone").val("");
                     $("#contact_message").val("");
                     toastr.success("Success!")
                 }).fail(function(error) {
@@ -40,33 +40,45 @@ $(document).ready(function() {
             }
         }
     });
-  //==========CONTACT FORM ============================
-  $("#subscribe_form").validate({
-    rules: { 
-        subscr_email: "required" 
-    },
-    submitHandler: function() {
-        if (!disabled) {
-            var button = $("#subscr-us-btn");
-            button.disabled = true;
-            button.val("Sending...");
-            var data = $(this.currentForm).serialize();
-            $.ajax('http://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                data: data
-            }).done(function(success) { 
-                $("#subscr_email").val(""); 
-                toastr.success("Success!")
-            }).fail(function(error) {
-                toastr.error("An error occured.")
-            }).always(function() {
-                disabled = false;
-                button.enabled = false;
-                button.val("Subscribe");
-            });
+    //==========CONTACT FORM ============================
+    $("#subscribe_form").validate({
+        rules: {
+            subscr_email: "required"
+        },
+        submitHandler: function() {
+            if (!disabled) {
+                var button = $("#subscr-us-btn");
+                button.disabled = true;
+                button.val("Sending...");
+                var data = $(this.currentForm).serialize();
+                $.ajax('http://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    data: data
+                }).done(function(success) {
+                    $("#subscr_email").val("");
+                    toastr.success("Success!")
+                }).fail(function(error) {
+                    toastr.error("An error occured.")
+                }).always(function() {
+                    disabled = false;
+                    button.enabled = false;
+                    button.val("Subscribe");
+                });
+            }
         }
-    }
-});
+    });
+    //*************  MAGIC SCROLLING **********************************
+
+    var controller = new ScrollMagic.Controller();
+    var sceneHeader = new ScrollMagic.Scene({
+            triggerElement: "#hospice-care",
+            triggerHook: '0.5',
+            offset: "0"
+        })
+        //.addIndicators()
+        .addTo(controller);
+    sceneHeader.setClassToggle("#hospice-care", "scrolled-hospice");
+
     // ============= MOBILE DROPDOWN =================
     $('#toggleMobileMEnu').click(function() {
         $(this).toggleClass('is-active');
@@ -115,8 +127,7 @@ function initMap() {
         '<h1 id="firstHeading" class="firstHeading">Carluza Hospice</h1>' +
         '<div id="bodyContent">' +
         '<p>Our headquarters are located in Studio City, CA. However, hospice care is an in-home service, and our expert staff is available in most cities in the Greater Los Angeles area. Studio City Headquarters. </p>' +
-        '<p>11712 Moorpark Street Suite #202. Studio City, CA 91604. Phone: (818) 980-9770. Fax: (818) 980-9771.</a> ' 
-         +
+        '<p>11712 Moorpark Street Suite #202. Studio City, CA 91604. Phone: (818) 980-9770. Fax: (818) 980-9771.</a> ' +
         '</div>' +
         '</div>';
 
